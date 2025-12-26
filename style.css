@@ -149,3 +149,96 @@ input, textarea {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
+/* === АНИМАЦИИ И ДОПОЛНИТЕЛЬНЫЕ СТИЛИ === */
+
+/* Анимации для товаров */
+.tool {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.tool:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    border-color: #f39c12;
+}
+
+.tool-img {
+    transition: transform 0.4s ease;
+}
+
+.tool:hover .tool-img {
+    transform: scale(1.05);
+}
+
+/* Иконки на товарах */
+.tool-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f39c12;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.tool:hover .tool-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Кнопки "В корзину" */
+.tool-btn {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.tool-btn:hover {
+    background: #f39c12;
+    transform: translateY(-2px);
+}
+
+/* Главная кнопка */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+/* Анимация ссылок в футере */
+.footer-links a {
+    position: relative;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #f39c12;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
